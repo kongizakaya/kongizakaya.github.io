@@ -1,1 +1,0 @@
-# kongizakaya.github.io
