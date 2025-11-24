@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kong Izakaya</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="icon" type="image/x-icon" href="images/logo.ico" />
+  <style>
+    body,
+    html {
+      height: 100%;
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Amatic SC", sans-serif;
+      font-weight: bold;
+    }
+
+    .text-black {
+      color: #000 !important;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .bgimg {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("images/cuteimage.png");
+      background-position: center;
+      min-height: 90%;
+    }
+
+    .bgimginterier {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("images/interierblur.png");
+      background-position: center;
+      min-height: 90%;
+    }
+
+    .bgimgfooter {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("images/footerimage.png");
+      background-position: center;
+      min-height: 10%;
+    }
+
+    /* Slideshow container */
+    * {
+      box-sizing: border-box
+    }
+
+    .slideshow-container {
+      max-width: 100%;
+      max-height: 80%;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .prev {
+      left: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* PDF style */
+    .pdfobject-container {
+      height: 600px;
+      border: 1px solid #fdf9fb;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top w3-center">
+    <div class="w3-bar w3-xlarge w3-black w3-hover-pink" id="myNavbar">
+      <a href="#" class="w3-bar-item w3-button">HOME</a>
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+      <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Header with image -->
+  <header class="bgimg w3-display-container" id="home">
+    <div class="w3-opacity w3-hover-opacity-off w3-display-bottommiddle" style="margin-bottom: 32px">
+      <span class="w3-tag w3-xlarge w3-white w3-hover-pink">
+        <i class="fa fa-newspaper-o" style="
+              font-size: 32px;
+              color: #f44336;
+              vertical-align: middle;
+              margin-right: 10px;
+            "></i>
+        News: We are open for dine-in and pick-up! Call us <a href="tel:+31627223935">+31627223935</a> or reserve a table
+        by Whatsapp
+        <a href="https://wa.me/31627223935" target="_blank"><i class="fa fa-whatsapp" style="font-size:32px;color:green; margin-left: 5px;"></i></a>
+      </span>
+    </div>
+  </header>
+
+  <!-- About Container -->
+  <div class="w3-container w3-padding-64 w3-pink w3-xlarge" id="about">
+    <div class="w3-content w3-center">
+      <img src="images/logo.PNG" style="width: 150px" class="w3-circle" alt="logo" />
+      <h1 class="w3-jumbo text-black"><b>About</b></h1>
+      <p class="text-black">
+        🍶 Welcome to our cozy little Japanese Izakaya!
+        We're not a fancy restaurant—just a warm, relaxed spot to unwind and enjoy yourself. 
+        Come in, share some delicious Japanese snacks 🍤, savor sushi 🍣, ramen 🍜, poke bowl 🥗 or donburi 🍚, sip on refreshing drinks 🍺, and let the stress melt away as you smile through the day. 
+        Our chef is cute, and we hope you'll visit us again soon! <br>
+        Follow us on Instagram and see more! <a href="https://www.instagram.com/kong.izakaya/?hl=en" target="_blank"><i class="fa fa-instagram w3-hover-opacity" style="font-size:32px;"></i></a>
+      </p>
+
+      <div class="w3-row">
+        <div class="w3-col l6 m12 s12">
+          <!-- Slideshow container -->
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 7</div>
+              <img src="images/exteriernew.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 7</div>
+              <img src="images/fortunecat.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 7</div>
+              <img src="images/fishlover.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 7</div>
+              <img src="images/friedchicken.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">5 / 7</div>
+              <img src="images/pokebowl.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">6 / 7</div>
+              <img src="images/shrimprice.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">7 / 7</div>
+              <img src="images/ramen.PNG" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev w3-left" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next w3-right" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+          </div>
+        </div>
+        <div class="w3-col l6 m12 s12">
+          <h1 class="text-black"><b>Opening Hours</b></h1>
+          <p class="text-black">Monday: 11:30 - 21:00</p>
+          <p class="text-black">Tuesday: 11:30 - 21:00</p>
+          <p class="text-black">Wednesday to Sunday: 11:30 - 21:00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Container -->
+  <div class="bgimginterier w3-padding-64 w3-xxlarge" id="menu">
+    <div class="w3-content w3-center">
+      <h1 class="w3-jumbo" style="margin-bottom: 64px">THE MENU</h1>
+      <div id="my-pdf"></div>
+      <script src="https://unpkg.com/pdfobject"></script>
+      <script>
+        var options = {
+          title: "Kong Izakaya Menu",
+          pdfOpenParams: { view: 'Fit' }
+        };
+        let customFallback = "This browser does not support inline PDFs. Please download the PDF to view it:<br><a href='kongmenu202512.pdf' target=\"_blank\"><i class=\"fa fa-file-pdf-o\" style=\"font-size:48px;color:red\"></i></a>";
+        PDFObject.embed("kongmenu202512.pdf", "#my-pdf", { fallbackLink: customFallback }, options);
+      </script>
+    </div>
+  </div>
+
+  <!-- Contact Container -->
+  <div class="w3-container w3-padding-64 w3-black w3-grayscale-min w3-xlarge" id="contact">
+    <div class="w3-content w3-center">
+      <h1 class="w3-jumbo" style="margin-bottom: 64px">Contact</h1>
+
+      <div class="w3-row">
+        <div class="w3-col l6 m12 s12">
+          <img src="images/cutemappicture.png" width="100%" />
+        </div>
+        <div class="w3-col l6 m12 s12" style="margin-top: 64px">
+          <i class="fa fa-map-marker" style="width:30px"></i><a href="https://maps.app.goo.gl/HvgJVCnAk2rWH6cG6" target="_blank">Lange Nieuwstraat 21, 3512 PB, Utrecht</a><br>
+          <i class="fa fa-phone" style="width:30px"></i> <a href="tel:+31627223935">+31627223935</a><br>
+          <i class="fa fa-envelope" style="width:30px"> </i><a href="mailto:kongizakaya@gmail.com">kongizakaya@gmail.com</a><br>
+          <a href="https://wa.me/31627223935" target="_blank"><button style="font-size:32px;color:green;background-color: #000;margin-top: 10px;">Reserve a table <i class="fa fa-whatsapp"></i></button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bgimgfooter w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+    <a href="https://www.instagram.com/kong.izakaya/?hl=en" target="_blank"><i class="fa fa-instagram w3-hover-opacity" style="font-size:32px;"></i></a>
+    <a href="https://maps.app.goo.gl/HvgJVCnAk2rWH6cG6" target="_blank"><i class="fa fa-google w3-hover-opacity" style="font-size:32px;"></i></a>
+    <a href="https://wa.me/31627223935" target="_blank"><i class="fa fa-whatsapp w3-hover-opacity" style="font-size:32px;"></i></a>
+    <p class="w3-large">Powered by <a href="https://www.instagram.com/kong.izakaya/?hl=en" target="_blank">Team Kong
+        Izakaya</a></p>
+  </footer>
+
+  <script>
+    let slideIndex = 1;
+    let slideTimer;
+
+    // Show first slide immediately
+    showSlides(slideIndex);
+
+    // Start automatic slideshow
+    startAutoSlideshow();
+
+    // Next/previous controls
+    function plusSlides(n) {
+      clearTimeout(slideTimer); // Clear auto timer when user manually controls
+      showSlides(slideIndex += n);
+      startAutoSlideshow(); // Restart auto slideshow after manual control
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      clearTimeout(slideTimer); // Clear auto timer when user clicks dot
+      showSlides(slideIndex = n);
+      startAutoSlideshow(); // Restart auto slideshow after manual control
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+
+      if (n > slides.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = slides.length; }
+
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+
+    function startAutoSlideshow() {
+      let slides = document.getElementsByClassName("mySlides");
+      slideTimer = setInterval(function () {
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        showSlides(slideIndex);
+      }, 2000); // Change image every 2 seconds
+    }
+  </script>
+</body>
+
+</html>
